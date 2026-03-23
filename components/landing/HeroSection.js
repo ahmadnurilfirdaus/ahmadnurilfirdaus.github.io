@@ -66,7 +66,7 @@ export default function HeroSection() {
             strings={[
               "Senior Frontend Developer",
               "React.js &amp; Next.js Specialist",
-              "4+ Years of Experience",
+              "5+ Years of Experience",
               "Building for Startups &amp; Gov&apos;t",
             ]}
             typeSpeed={60}
