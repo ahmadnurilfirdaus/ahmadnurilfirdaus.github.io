@@ -13,16 +13,16 @@ const experiences = [
       "Build user interfaces and API integrations for web applications at one of Indonesia's largest state-owned energy companies. Responsible for delivering scalable, high-performance front-end solutions.",
     tags: ["Next.js", "React.js"],
   },
-  {
-    type: "work",
-    year: "Jan 2022 – Present",
-    title: "Frontend Developer",
-    company: "PT Kencana Konsep",
-    location: "Kramatjati, Jakarta, Indonesia",
-    description:
-      "Develop and maintain front-end web applications, collaborating with design and back-end teams to deliver user-friendly interfaces.",
-    tags: ["React.js", "Next.js"],
-  },
+  // {
+  //   type: "work",
+  //   year: "Jan 2022 – Present",
+  //   title: "Frontend Developer",
+  //   company: "PT Kencana Konsep",
+  //   location: "Kramatjati, Jakarta, Indonesia",
+  //   description:
+  //     "Develop and maintain front-end web applications, collaborating with design and back-end teams to deliver user-friendly interfaces.",
+  //   tags: ["React.js", "Next.js"],
+  // },
   {
     type: "work",
     year: "Jun 2021 – May 2022",
