@@ -1,0 +1,1039 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milari Risalah Wisata - Travel Umroh & Haji Premium</title>
+  <meta name="description" content="Milari Risalah Wisata menghadirkan perjalanan umroh dan haji terpercaya dengan pelayanan premium, pembimbing berpengalaman, hotel dekat masjid, dan pendampingan ibadah terbaik." />
+  <meta property="og:title" content="Milari Risalah Wisata - Travel Umroh & Haji Premium" />
+  <meta property="og:description" content="Nikmati perjalanan spiritual terbaik bersama Milari Risalah Wisata." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1609599006353-f7e1c3d9d31c?auto=format&fit=crop&w=1200&q=80" />
+
+  <link rel="icon" type="image/png" href="asset/mr-logo.png">
+  <link rel="apple-touch-icon" href="asset/mr-logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root {
+      --color-primary: #1d4d33;
+      --color-primary-dark: #0d2818;
+      --color-secondary: #d4bd63;
+      --color-accent: #c8a45c;
+      --color-light: #f8f4e8;
+      --color-dark: #121212;
+      --color-white: #ffffff;
+      --color-muted: #d9d9d9;
+      --shadow-soft: 0 20px 40px rgba(0,0,0,0.15);
+      --gradient-islamic: linear-gradient(135deg,#0d2818 0%,#1d4d33 40%,#0a2015 100%);
+      --gradient-gold: linear-gradient(135deg,#2c1810 0%,#4a2c1a 50%,#2c1810 100%);
+      --transition: all .8s cubic-bezier(0.25,0.46,0.45,0.94);
+      --pattern: radial-gradient(circle at center, rgba(200,164,92,.08) 1px, transparent 1px);
+    }
+
+    * {margin:0;padding:0;box-sizing:border-box;}
+    html {scroll-behavior:smooth;}
+    body {
+      font-family:'Inter',sans-serif;
+      background:var(--color-light);
+      color:var(--color-dark);
+      overflow-x:hidden;
+      line-height:1.7;
+    }
+
+    body::before {
+      content:'';
+      position:fixed;
+      inset:0;
+      background-image:var(--pattern);
+      background-size:30px 30px;
+      opacity:.2;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    h1,h2,h3,h4 {
+      font-family:'Amiri',serif;
+      line-height:1.2;
+    }
+
+    img {display:block;max-width:100%;}
+
+    section {padding:100px 6%;position:relative;}
+
+    .container {max-width:1280px;margin:auto;}
+
+    .section-title {
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .ornament {
+      width:120px;
+      height:2px;
+      background:linear-gradient(to right,transparent,var(--color-accent),transparent);
+      margin:18px auto;
+      position:relative;
+    }
+
+    .ornament::before {
+      content:'☪';
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      background:var(--color-light);
+      padding:0 10px;
+      color:var(--color-accent);
+    }
+
+    .hero {
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:var(--color-white);
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.82)),
+        url('asset/hero2.jpg') center/cover;
+      animation:kenburns 18s ease-in-out infinite alternate;
+    }
+
+    .hero[data-bg-image]::before {
+      content:'';
+      position:absolute;
+      inset:0;
+      background-image:
+      radial-gradient(circle at top right, rgba(212,189,99,.2), transparent 40%),
+      radial-gradient(circle at bottom left, rgba(255,255,255,.06), transparent 30%);
+      animation:gradientShift 10s ease infinite alternate;
+    }
+
+    .hero-pattern {
+      position:absolute;
+      inset:0;
+      background-image:
+      linear-gradient(45deg, rgba(255,255,255,.04) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(255,255,255,.04) 25%, transparent 25%);
+      background-size:80px 80px;
+      opacity:.15;
+    }
+
+    .hero-content {position:relative;z-index:2;max-width:900px;}
+
+    .hero-logo {
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      overflow:hidden;
+      margin:0 auto 30px;
+      border:4px solid rgba(255,255,255,.2);
+      box-shadow:0 0 40px rgba(212,189,99,.5);
+      animation:floating 6s ease-in-out infinite;
+    }
+
+    .hero h1 {
+      font-size:clamp(3rem,7vw,6rem);
+      margin-bottom:18px;
+    }
+
+    .hero p {
+      font-size:1.15rem;
+      max-width:760px;
+      margin:0 auto 30px;
+      color:#f1f1f1;
+    }
+
+    .btn-group {
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn {
+      padding:16px 28px;
+      border-radius:60px;
+      text-decoration:none;
+      font-weight:700;
+      transition:var(--transition);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:48px;
+    }
+
+    .btn-primary {
+      background:var(--color-accent);
+      color:#111;
+      box-shadow:0 10px 30px rgba(200,164,92,.35);
+      animation:glow 3s infinite;
+    }
+
+    .btn-secondary {
+      border:1px solid rgba(255,255,255,.35);
+      color:#fff;
+      backdrop-filter:blur(8px);
+    }
+
+    .btn:hover {
+      transform:translateY(-5px);
+    }
+
+    .trust-bar {
+      background:var(--color-primary-dark);
+      color:#fff;
+      padding:24px 6%;
+    }
+
+    .trust-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+      text-align:center;
+    }
+
+    .trust-item {
+      padding:18px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .trust-item i {
+      color:var(--color-accent);
+      font-size:1.5rem;
+      margin-bottom:12px;
+    }
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+
+    .card {
+      background:#fff;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+      transition:var(--transition);
+      position:relative;
+    }
+
+    .card:hover {
+      transform:translateY(-12px);
+    }
+
+    .card-image {height:240px;overflow:hidden;}
+
+    .card-image img {height:100%;}
+
+    .card-content {padding:28px;}
+
+    .badge {
+      position:absolute;
+      top:18px;
+      left:18px;
+      background:var(--color-accent);
+      color:#111;
+      padding:8px 14px;
+      border-radius:30px;
+      font-size:.8rem;
+      font-weight:700;
+      animation:pulse 2s infinite;
+    }
+
+    .price {
+      font-size:2rem;
+      color:var(--color-primary);
+      margin:12px 0;
+      font-weight:800;
+    }
+
+    .features li {
+      list-style:none;
+      margin-bottom:12px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .features i {color:var(--color-accent);margin-top:4px;}
+
+    .timeline {
+      display:grid;
+      gap:30px;
+      margin-top:50px;
+    }
+
+    .timeline-item {
+      display:grid;
+      grid-template-columns:100px 1fr 220px;
+      gap:24px;
+      align-items:center;
+      background:#fff;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .timeline-day {
+      background:var(--gradient-islamic);
+      color:#fff;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      font-weight:700;
+    }
+
+    .timeline-image img {
+      height:180px;
+    }
+
+    .schedule-table {
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:24px;
+      background:#fff;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding:18px;
+      text-align:left;
+      border-bottom:1px solid #eee;
+    }
+
+    .status {
+      padding:8px 14px;
+      border-radius:40px;
+      font-size:.8rem;
+      font-weight:700;
+      display:inline-block;
+    }
+
+    .available {background:#d4f4dd;color:#166534;}
+    .almost {background:#fff3cd;color:#92400e;animation:pulse 2s infinite;}
+    .full {background:#ffd6d6;color:#991b1b;}
+
+    .hotel-grid,
+    .guide-grid,
+    .gallery-grid,
+    .testimonial-grid,
+    .footer-grid {
+      display:grid;
+      gap:30px;
+    }
+
+    .hotel-grid {grid-template-columns:repeat(2,1fr);}
+    .guide-grid {grid-template-columns:repeat(2,1fr);}
+    .gallery-grid {grid-template-columns:repeat(3,1fr);}
+    .testimonial-grid {grid-template-columns:repeat(3,1fr);}
+    .footer-grid {grid-template-columns:2fr 1fr 1fr 1fr;}
+
+    .hotel-card,
+    .guide-card,
+    .testimonial-card {
+      background:#fff;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hotel-card img,
+    .guide-card img,
+    .gallery-grid img {
+      height:260px;
+      width:100%;
+      object-fit:cover;
+    }
+
+    .guide-card {
+      text-align:center;
+    }
+
+    .guide-card .content,
+    .hotel-content,
+    .testimonial-content {
+      padding:28px;
+    }
+
+    .gallery-grid div {
+      overflow:hidden;
+      border-radius:24px;
+      position:relative;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .gallery-grid img {
+      transition:var(--transition);
+    }
+
+    .gallery-grid div:hover img {
+      transform:scale(1.08);
+    }
+
+    .gallery-caption {
+      position:absolute;
+      inset:auto 0 0;
+      padding:20px;
+      background:linear-gradient(to top, rgba(0,0,0,.85), transparent);
+      color:#fff;
+    }
+
+    .testimonials {
+      background:var(--gradient-islamic);
+      color:#fff;
+    }
+
+    .testimonial-card {
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(12px);
+    }
+
+    .faq-item {
+      background:#fff;
+      border-radius:18px;
+      margin-bottom:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .faq-question {
+      padding:22px;
+      cursor:pointer;
+      font-weight:700;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .faq-answer {
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .5s ease;
+      padding:0 22px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height:200px;
+      padding:0 22px 22px;
+    }
+
+    .cta-final {
+      color:#fff;
+      text-align:center;
+      background:
+      linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.82)),
+      url('asset/hero1.jpeg') center/cover;
+    }
+
+    .map iframe {
+      width:100%;
+      height:420px;
+      border:0;
+      border-radius:24px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    footer {
+      background:#09150d;
+      color:#fff;
+      padding:80px 6% 30px;
+    }
+
+    footer a {
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .floating-wa {
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:1000;
+      background:#25D366;
+      color:#fff;
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.7rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
+      animation:pulse 2s infinite;
+    }
+
+    .back-top {
+      position:fixed;
+      left:20px;
+      bottom:20px;
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      background:var(--color-primary);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      visibility:hidden;
+      transition:.4s;
+      z-index:999;
+    }
+
+    .back-top.show {
+      opacity:1;
+      visibility:visible;
+    }
+
+    .reveal {
+      opacity:0;
+      transform:translateY(40px);
+      transition:var(--transition);
+    }
+
+    .reveal.active {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @keyframes floating {
+      0%,100% {transform:translateY(0px);} 50% {transform:translateY(-12px);} }
+
+    @keyframes pulse {
+      0% {transform:scale(1);} 50% {transform:scale(1.04);} 100% {transform:scale(1);} }
+
+    @keyframes glow {
+      0%,100% {box-shadow:0 0 20px rgba(200,164,92,.4);} 50% {box-shadow:0 0 40px rgba(200,164,92,.75);} }
+
+    @keyframes gradientShift {
+      from {opacity:.5;} to {opacity:1;} }
+
+    @keyframes kenburns {
+      from {background-size:100%;} to {background-size:108%;} }
+
+    @media (max-width: 1024px) {
+      .cards,
+      .gallery-grid,
+      .testimonial-grid,
+      .footer-grid,
+      .trust-grid,
+      .hotel-grid,
+      .guide-grid {
+        grid-template-columns:1fr 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {padding:80px 20px;}
+      .cards,
+      .gallery-grid,
+      .testimonial-grid,
+      .footer-grid,
+      .trust-grid,
+      .hotel-grid,
+      .guide-grid {
+        grid-template-columns:1fr;
+      }
+
+      .hero h1 {font-size:3rem;}
+      .btn-group {flex-direction:column;}
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration:0.01ms !important;
+        transition-duration:0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero" data-bg-image="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-content reveal active">
+    <div class="hero-logo">
+      <img src="asset/mr-logo.png" alt="Logo Milari Risalah" loading="eager" style="object-fit:cover;width:100%;height:100%;" />
+    </div>
+    <h1>Khidmatnya Ibadah Bersama Milari Risalah</h1>
+    <p>Perjalanan umroh dan haji eksklusif dengan pelayanan amanah, hotel premium dekat masjid, dan bimbingan ibadah penuh keberkahan.</p>
+
+    <div class="btn-group">
+      <a href="https://wa.me/6281234567890?text=Assalamualaikum%2C%20saya%20ingin%20konsultasi%20paket%20umroh" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Konsultasi Gratis</a>
+      <a href="#paket" class="btn btn-secondary"><i class="fa-solid fa-kaaba"></i> Lihat Paket</a>
+    </div>
+  </div>
+</header>
+
+<section class="trust-bar">
+  <div class="container trust-grid">
+    <div class="trust-item reveal"><i class="fa-solid fa-shield-halved"></i><h3>PPIU Resmi</h3><p>U.223/2021</p></div>
+    <div class="trust-item reveal"><i class="fa-solid fa-calendar"></i><h3>Berdiri</h3><p>Sejak 2021</p></div>
+    <div class="trust-item reveal"><i class="fa-solid fa-users"></i><h3>1.500+</h3><p>Jamaah Berangkat</p></div>
+    <div class="trust-item reveal"><i class="fa-solid fa-mosque"></i><h3>Premium Service</h3><p>Hotel Dekat Masjid</p></div>
+  </div>
+</section>
+
+<main>
+  <section id="paket">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Paket Perjalanan Suci</h2>
+        <p>Temukan pilihan perjalanan spiritual terbaik sesuai kebutuhan Anda.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="badge">Terlaris</span>
+          <div class="card-image">
+            <img src="asset/hero6.jpg" alt="Jamaah tawaf di Ka'bah" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          </div>
+          <div class="card-content">
+            <h3>Umroh Reguler 9 Hari</h3>
+            <div class="price">Rp 32.900.000</div>
+            <ul class="features">
+              <li><i class="fa-solid fa-check"></i> Hotel bintang 5</li>
+              <li><i class="fa-solid fa-check"></i> Pesawat direct flight</li>
+              <li><i class="fa-solid fa-check"></i> Muthawwif berpengalaman</li>
+              <li><i class="fa-solid fa-check"></i> City tour lengkap</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Saya%20tertarik%20Paket%20Reguler">Pilih Paket</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <span class="badge">Premium</span>
+          <div class="card-image">
+            <img src="asset/hero5.jpg" alt="Jamaah berdoa khusyuk" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          </div>
+          <div class="card-content">
+            <h3>Umroh VIP 12 Hari</h3>
+            <div class="price">Rp 45.500.000</div>
+            <ul class="features">
+              <li><i class="fa-solid fa-check"></i> Hotel premium view Haram</li>
+              <li><i class="fa-solid fa-check"></i> Lounge airport</li>
+              <li><i class="fa-solid fa-check"></i> Bus eksklusif</li>
+              <li><i class="fa-solid fa-check"></i> Makan full board</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Saya%20tertarik%20Paket%20VIP">Pilih Paket</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <span class="badge">Ekonomis</span>
+          <div class="card-image">
+            <img src="asset/hero3.jpg" alt="Paket Umroh Hemat" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          </div>
+          <div class="card-content">
+            <h3>Umroh Hemat 9 Hari</h3>
+            <div class="price">Rp 28.500.000</div>
+            <ul class="features">
+              <li><i class="fa-solid fa-check"></i> Hotel nyaman</li>
+              <li><i class="fa-solid fa-check"></i> Pendamping ibadah</li>
+              <li><i class="fa-solid fa-check"></i> Manasik lengkap</li>
+              <li><i class="fa-solid fa-check"></i> Visa & handling</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Saya%20tertarik%20Paket%20Hemat">Pilih Paket</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Jadwal Keberangkatan</h2>
+      </div>
+
+      <table class="schedule-table reveal">
+        <thead>
+          <tr>
+            <th>Batch</th>
+            <th>Tanggal</th>
+            <th>Durasi</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>September 2026</td>
+            <td>12 Sept 2026</td>
+            <td>9 Hari</td>
+            <td><span class="status available">Tersedia</span></td>
+          </tr>
+          <tr>
+            <td>Oktober 2026</td>
+            <td>03 Okt 2026</td>
+            <td>12 Hari</td>
+            <td><span class="status almost">Hampir Penuh</span></td>
+          </tr>
+          <tr>
+            <td>Desember 2026</td>
+            <td>19 Des 2026</td>
+            <td>9 Hari</td>
+            <td><span class="status full">Penuh</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-day">1</div>
+          <div>
+            <h3>Keberangkatan Jakarta - Madinah</h3>
+            <p><!-- PLACEHOLDER: EDIT DATA INI --> Jamaah berkumpul di bandara, briefing, dan perjalanan menuju Madinah.</p>
+          </div>
+          <div class="timeline-image">
+            <img src="asset/hero3.jpg" alt="Masjid Nabawi malam hari" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-day">4</div>
+          <div>
+            <h3>Ziarah & Persiapan Umroh</h3>
+            <p><!-- PLACEHOLDER: EDIT DATA INI --> Mengunjungi Raudhah, Jabal Uhud, dan city tour Madinah.</p>
+          </div>
+          <div class="timeline-image">
+            <img src="asset/hero5.jpg" alt="Jamaah di Masjid Nabawi" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-day">6</div>
+          <div>
+            <h3>Pelaksanaan Umroh</h3>
+            <p><!-- PLACEHOLDER: EDIT DATA INI --> Tawaf, sa'i, dan tahallul dengan pendampingan penuh dari ustadz.</p>
+          </div>
+          <div class="timeline-image">
+            <img src="asset/hero6.jpg" alt="Ka'bah aerial malam" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-bg-image="section" style="background:var(--gradient-islamic);color:#fff;">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Hotel & Maskapai</h2>
+      </div>
+
+      <div class="hotel-grid">
+        <div class="hotel-card reveal">
+          <img src="asset/hotel1.png" alt="Hotel mewah Makkah" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          <div class="hotel-content">
+            <h3>Swissotel Makkah ★★★★★</h3>
+            <p>Hanya 3 menit berjalan kaki menuju Masjidil Haram.</p>
+          </div>
+        </div>
+
+        <div class="hotel-card reveal">
+          <img src="asset/hotel2.png" alt="Hotel premium Madinah" loading="lazy" style="object-fit:cover;width:100%;height:100%;" />
+          <div class="hotel-content">
+            <h3>Pullman Zamzam Madinah ★★★★★</h3>
+            <p>Lokasi strategis dekat Masjid Nabawi dan area kuliner.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;text-align:center;" class="reveal">
+        <h3>Maskapai Pilihan</h3>
+        <p><i class="fa-solid fa-plane"></i> Saudi Airlines • Emirates • Garuda Indonesia</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Dibimbing oleh Ustadz Berpengalaman</h2>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" width="110" height="110" style="display:block;margin:0 auto;border-radius:50%;">
+            <circle cx="55" cy="55" r="55" fill="#1e3a1a"/>
+            <circle cx="55" cy="43" r="17" fill="#e8d5a3"/>
+            <path d="M38 33 Q38 20 55 20 Q72 20 72 33 L72 36 Q55 32 38 36 Z" fill="#c8a030"/>
+            <rect x="37" y="34" width="36" height="5" rx="2" fill="#a07020"/>
+            <path d="M18 110 Q22 76 55 73 Q88 76 92 110 Z" fill="#c8a030"/>
+            <path d="M30 110 Q33 82 55 79 Q77 82 80 110 Z" fill="#e8d5a3"/>
+          </svg>
+          <div class="content">
+            <h3>Ust. Ahmad Fauzi, Lc.</h3>
+            <p><!-- PLACEHOLDER: EDIT DATA INI --> Berpengalaman membimbing lebih dari 70 keberangkatan jamaah umroh.</p>
+          </div>
+        </div>
+
+        <div class="guide-card reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" width="110" height="110" style="display:block;margin:0 auto;border-radius:50%;">
+            <circle cx="55" cy="55" r="55" fill="#2a4a22"/>
+            <circle cx="55" cy="43" r="17" fill="#e8d5a3"/>
+            <path d="M38 33 Q38 20 55 20 Q72 20 72 33 L72 36 Q55 32 38 36 Z" fill="#d4a830"/>
+            <rect x="37" y="34" width="36" height="5" rx="2" fill="#b08020"/>
+            <path d="M18 110 Q22 76 55 73 Q88 76 92 110 Z" fill="#d4a830"/>
+            <path d="M30 110 Q33 82 55 79 Q77 82 80 110 Z" fill="#e8d5a3"/>
+          </svg>
+          <div class="content">
+            <h3>Ust. Hilman Syah, M.Ag.</h3>
+            <p><!-- PLACEHOLDER: EDIT DATA INI --> Fokus pada pembinaan ibadah praktis dan manasik intensif sebelum keberangkatan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Galeri Perjalanan Jamaah</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="reveal"><img src="asset/hero2.jpg" alt="Aerial Masjidil Haram" loading="lazy" style="object-fit:cover;width:100%;height:100%;" /><div class="gallery-caption">Masjidil Haram Golden Hour</div></div>
+        <div class="reveal"><img src="asset/hero4.jpg" alt="Abraj Al-Bait Clock Tower" loading="lazy" style="object-fit:cover;width:100%;height:100%;" /><div class="gallery-caption">Abraj Al-Bait Makkah</div></div>
+        <div class="reveal"><img src="asset/hero6.jpg" alt="Aerial Ka'bah dari atas" loading="lazy" style="object-fit:cover;width:100%;height:100%;" /><div class="gallery-caption">Ka'bah dari Udara</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Testimoni Jamaah</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-content">
+            <h3>★★★★★</h3>
+            <p>“Pelayanannya luar biasa, hotel sangat dekat masjid dan pembimbing sangat sabar.”</p>
+            <strong>— Ibu Nur Aisyah</strong>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-content">
+            <h3>★★★★★</h3>
+            <p>“Semua proses dibantu sampai keberangkatan. Sangat recommended untuk keluarga.”</p>
+            <strong>— Bapak Rahmat Hidayat</strong>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-content">
+            <h3>★★★★★</h3>
+            <p>“MasyaAllah pengalaman ibadah yang sangat nyaman dan penuh kekhusyukan.”</p>
+            <strong>— Hj. Fitri Handayani</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+      </div>
+
+      <div class="faq-item reveal active">
+        <div class="faq-question">Apakah visa dan tiket sudah termasuk?<span>+</span></div>
+        <div class="faq-answer"><p>Ya, seluruh paket sudah termasuk visa umroh, tiket pesawat, hotel, makan, dan transportasi.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">Apakah tersedia cicilan umroh?<span>+</span></div>
+        <div class="faq-answer"><p><!-- PLACEHOLDER: EDIT DATA INI --> Tersedia program cicilan syariah bekerja sama dengan lembaga terpercaya.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">Berapa jarak hotel ke masjid?<span>+</span></div>
+        <div class="faq-answer"><p>Rata-rata hotel hanya 3–5 menit berjalan kaki dari Masjidil Haram dan Nabawi.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final" data-bg-image="cta">
+    <div class="container reveal">
+      <h2 style="font-size:clamp(2.5rem,5vw,4.5rem);margin-bottom:20px;">Siapkan Perjalanan Spiritual Terbaik Anda</h2>
+      <p style="max-width:700px;margin:0 auto 30px;">Konsultasikan kebutuhan perjalanan umroh dan haji Anda bersama tim Milari Risalah sekarang juga.</p>
+      <a href="https://wa.me/6281234567890?text=Assalamualaikum%2C%20saya%20ingin%20informasi%20umroh" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Hubungi via WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="map">
+    <div class="container">
+      <div class="section-title reveal">
+        <div class="ornament"></div>
+        <h2>Kunjungi Kantor Kami</h2>
+        <p>Jl. Jelupang Raya, BSD, Tangerang Selatan, Banten</p>
+      </div>
+
+      <iframe src="https://www.google.com/maps?q=BSD%20Tangerang%20Selatan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h3>Milari Risalah Wisata</h3>
+      <p>Travel umroh & haji terpercaya dengan pelayanan premium dan pembimbing berpengalaman.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="#paket">Paket</a></p>
+      <p><a href="#">Galeri</a></p>
+      <p><a href="#">FAQ</a></p>
+    </div>
+
+    <div>
+      <h4>Kontak</h4>
+      <p>+62 812-3456-7890</p>
+      <p>info@milaririsalah.com</p>
+    </div>
+
+    <div>
+      <h4>Sosial Media</h4>
+      <p><i class="fa-brands fa-instagram"></i> @milaririsalahpusat</p>
+      <p><i class="fa-brands fa-youtube"></i> Milari Risalah</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:40px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;">
+    © 2026 Milari Risalah Wisata. All Rights Reserved.
+  </div>
+</footer>
+
+<a href="https://wa.me/6281234567890?text=Assalamualaikum" class="floating-wa" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="#top" class="back-top" id="backTop">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<script>
+// ================================================================
+// ZERO BROKEN IMAGE SYSTEM — Wajib diimplementasikan
+// ================================================================
+
+// Fungsi 1: Guard untuk <img> tags (backup dari onerror inline)
+function initImageGuards() {
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.hasAttribute('data-guard-applied')) {
+      img.setAttribute('data-guard-applied', 'true');
+      img.addEventListener('error', function() {
+        const w = this.naturalWidth || this.width || 800;
+        const h = this.naturalHeight || this.height || 600;
+        this.onerror = null;
+        this.src = `https://placehold.co/${w}x${h}/0d2818/C8A45C?text=Gambar+Tidak+Tersedia`;
+        this.style.objectFit = 'cover';
+      });
+    }
+  });
+}
+
+// Fungsi 2: Guard untuk background-image
+function guardBackgroundImage(selector, fallbackGradient) {
+  document.querySelectorAll(selector).forEach(el => {
+    const style = window.getComputedStyle(el);
+    const bg = style.backgroundImage;
+    if (bg && bg !== 'none') {
+      const urlMatch = bg.match(/url\(["']?([^"')]+)["']?\)/);
+      if (urlMatch && urlMatch[1]) {
+        const testImg = new Image();
+        testImg.onerror = () => {
+          el.style.backgroundImage = 'none';
+          el.style.background = fallbackGradient;
+        };
+        testImg.src = urlMatch[1];
+      }
+    }
+  });
+}
+
+// Jalankan setelah DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  // Init semua image guards
+  initImageGuards();
+
+  // Islamic gradient fallback untuk background sections
+  const darkIslamic =
+    'linear-gradient(135deg,#0d2818 0%,#1a4a2e 40%,#0a2015 100%)';
+  const goldIslamic =
+    'linear-gradient(135deg,#2c1810 0%,#4a2c1a 50%,#2c1810 100%)';
+
+  // Guard semua elemen dengan data-bg-image attribute
+  guardBackgroundImage('[data-bg-image="hero"]', darkIslamic);
+  guardBackgroundImage('[data-bg-image="cta"]', goldIslamic);
+  guardBackgroundImage('[data-bg-image="section"]', darkIslamic);
+  guardBackgroundImage('[data-bg-image]', darkIslamic);
+
+  // Observer untuk lazy-loaded images yang mungkin load belakangan
+  const observer = new MutationObserver(() => initImageGuards());
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: .12 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentElement.classList.toggle('active');
+    });
+  });
+
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backTop.classList.add('show');
+    } else {
+      backTop.classList.remove('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+```

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rayyan Menara Travel — Bersama Meraih Kemuliaan | Umroh & Haji Khusus</title>
+<meta name="description" content="Rayyan Menara Travel — Travel Umroh & Haji Khusus terpercaya. Sekali Bayar, Umroh Berkali-Kali. Bimbingan ustadz berpengalaman, hotel dekat Masjidil Haram & Nabawi." />
+<meta property="og:title" content="Rayyan Menara Travel — Bersama Meraih Kemuliaan" />
+<meta property="og:description" content="Travel Umroh & Haji terpercaya di Makassar. Sekali Bayar Umroh Berkali-Kali." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="asset/hero2.jpg" />
+<link rel="icon" type="image/png" href="asset/rmt-logo.png">
+<link rel="apple-touch-icon" href="asset/rmt-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+/* ============== DESIGN TOKENS ============== */
+:root{
+  --c-primary:        #1E2BE6;          /* deep electric blue (from logo) */
+  --c-primary-deep:   #0F1A8C;          /* darker brand blue */
+  --c-primary-soft:   #2D3AF0;          /* hover */
+  --c-secondary:      #0B1140;          /* midnight navy */
+  --c-accent:         #C8A45C;          /* islamic gold */
+  --c-accent-bright:  #E8C547;          /* logo gold */
+  --c-accent-deep:    #8C6B2E;
+  --c-cream:          #FBF7EE;
+  --c-sand:           #F4ECDC;
+  --c-ink:            #0A0F2E;
+  --c-muted:          #5C617A;
+  --c-line:           rgba(11,17,64,.10);
+  --c-white:          #ffffff;
+  --shadow-sm: 0 4px 14px rgba(11,17,64,.08);
+  --shadow-md: 0 14px 40px rgba(11,17,64,.12);
+  --shadow-lg: 0 30px 70px rgba(11,17,64,.18);
+  --shadow-gold: 0 18px 40px rgba(200,164,92,.35);
+  --radius: 18px;
+  --radius-lg: 28px;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --container: 1240px;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-arab: "Amiri", serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);
+  color:var(--c-ink);
+  background:var(--c-cream);
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+.section{padding:110px 0;position:relative}
+.section-sm{padding:70px 0}
+
+/* ============== TYPOGRAPHY ============== */
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;letter-spacing:-.01em;color:var(--c-secondary)}
+h1{font-size:clamp(2.4rem,5.2vw,4.6rem);font-weight:800}
+h2{font-size:clamp(2rem,3.6vw,3.2rem)}
+h3{font-size:clamp(1.3rem,1.8vw,1.6rem)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  text-transform:uppercase;letter-spacing:.28em;font-size:.78rem;font-weight:600;
+  color:var(--c-accent-deep);
+}
+.eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--c-accent)}
+.section-title{text-align:center;max-width:760px;margin:0 auto 60px}
+.section-title h2{margin:16px 0 14px}
+.section-title p{color:var(--c-muted);font-size:1.05rem}
+
+/* ============== ORNAMENTS ============== */
+.divider{
+  display:flex;align-items:center;justify-content:center;gap:18px;margin:24px 0;color:var(--c-accent);
+}
+.divider .line{height:1px;width:80px;background:linear-gradient(90deg,transparent,var(--c-accent),transparent)}
+.divider svg{width:34px;height:34px}
+
+.geo-bg{
+  position:absolute;inset:0;pointer-events:none;opacity:.06;z-index:0;
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--c-secondary) 1px, transparent 0),
+    repeating-linear-gradient(45deg, transparent 0 22px, rgba(11,17,64,.06) 22px 23px);
+  background-size: 22px 22px, auto;
+}
+.section > .container{position:relative;z-index:1}
+
+/* ============== NAVIGATION ============== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  padding:18px 0;
+  transition:all .4s var(--ease);
+  background:transparent;
+}
+.nav.scrolled{
+  background:rgba(11,17,64,.92);
+  backdrop-filter:blur(14px);
+  padding:12px 0;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-logo{width:46px;height:46px;border-radius:50%;background:var(--c-primary);display:grid;place-items:center;color:var(--c-accent-bright);font-family:var(--font-arab);font-size:1.3rem;font-weight:700;box-shadow:0 0 0 2px var(--c-accent-bright), 0 6px 20px rgba(30,43,230,.5)}
+.brand-name{font-family:var(--font-display);font-weight:700;font-size:1.1rem;line-height:1.1}
+.brand-tag{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c-accent-bright);opacity:.9}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:#fff;font-size:.92rem;font-weight:500;opacity:.85;transition:.3s;position:relative}
+.nav-links a:hover{opacity:1;color:var(--c-accent-bright)}
+.nav-cta{
+  background:var(--c-accent);color:var(--c-secondary)!important;
+  padding:10px 22px;border-radius:999px;font-weight:600!important;opacity:1!important;
+  transition:.3s;
+}
+.nav-cta:hover{background:var(--c-accent-bright);transform:translateY(-2px);box-shadow:var(--shadow-gold)}
+.menu-toggle{display:none;color:#fff;font-size:1.5rem}
+
+/* ============== BUTTONS ============== */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 32px;border-radius:999px;font-weight:600;font-size:.98rem;
+  transition:all .35s var(--ease);
+  white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--c-accent-bright),var(--c-accent));
+  color:var(--c-secondary);
+  box-shadow:var(--shadow-gold);
+  position:relative;overflow:hidden;
+}
+.btn-primary::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
+  transform:translateX(-100%);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 26px 50px rgba(200,164,92,.5)}
+.btn-primary:hover::after{transform:translateX(100%);transition:transform .9s}
+.btn-ghost{
+  background:rgba(255,255,255,.08);color:#fff;
+  border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{background:#fff;color:var(--c-secondary);transform:translateY(-3px)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1ebe57;transform:translateY(-3px);box-shadow:0 18px 40px rgba(37,211,102,.4)}
+
+/* ============== HERO ============== */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  color:#fff;overflow:hidden;isolation:isolate;
+  padding-top:100px;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:-2;
+  background:url("asset/hero2.jpg") center/cover no-repeat;
+  transform:scale(1.1);
+  animation:kenburns 20s var(--ease) infinite alternate;
+  will-change:transform;
+}
+@keyframes kenburns{
+  0%{transform:scale(1.05) translateY(0)}
+  100%{transform:scale(1.18) translateY(-20px)}
+}
+.hero-overlay{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(30,43,230,.25), transparent 60%),
+    linear-gradient(180deg, rgba(10,15,46,.5) 0%, rgba(10,15,46,.78) 70%, rgba(10,15,46,.95) 100%);
+}
+.hero-overlay::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(200,164,92,.08),transparent 40%,rgba(30,43,230,.12));
+  animation:shift 12s ease-in-out infinite alternate;
+}
+@keyframes shift{0%{opacity:.4}100%{opacity:.9}}
+
+.hero-content{position:relative;z-index:2;text-align:center;max-width:920px;margin:0 auto}
+.hero-logo{
+  width:120px;height:120px;border-radius:50%;
+  background:var(--c-primary);
+  display:grid;place-items:center;margin:0 auto 28px;
+  color:var(--c-accent-bright);font-family:var(--font-arab);font-size:3rem;font-weight:700;
+  box-shadow:0 0 0 3px var(--c-accent-bright), 0 0 60px rgba(232,197,71,.45), 0 20px 50px rgba(0,0,0,.5);
+  animation:floaty 5s ease-in-out infinite;
+}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.hero-arabic{font-family:var(--font-arab);color:var(--c-accent-bright);font-size:1.4rem;margin-bottom:8px;opacity:.9}
+.hero h1{color:#fff;margin:0 0 22px;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero h1 .gold{
+  background:linear-gradient(135deg,var(--c-accent-bright),var(--c-accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{font-size:clamp(1.05rem,1.4vw,1.25rem);max-width:660px;margin:0 auto 40px;opacity:.92;font-weight:300}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+.hero-orbs span{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle,var(--c-accent-bright),transparent 70%);
+  opacity:.25;filter:blur(2px);pointer-events:none;
+}
+.hero-orbs span:nth-child(1){width:140px;height:140px;top:18%;left:8%;animation:floaty 7s ease-in-out infinite}
+.hero-orbs span:nth-child(2){width:80px;height:80px;top:65%;right:10%;animation:floaty 9s ease-in-out infinite reverse}
+.hero-orbs span:nth-child(3){width:50px;height:50px;top:30%;right:18%;animation:floaty 6s ease-in-out infinite}
+
+.hero-ornament{
+  position:absolute;width:280px;height:280px;opacity:.14;color:var(--c-accent-bright);
+  animation:spin 60s linear infinite;
+}
+.hero-ornament.tl{top:-80px;left:-80px}
+.hero-ornament.br{bottom:-80px;right:-80px;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.scroll-cue{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:#fff;opacity:.6;
+  font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.scroll-cue::after{content:"";width:1px;height:40px;background:var(--c-accent-bright);animation:scrolldown 2s ease-in-out infinite}
+@keyframes scrolldown{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============== TRUST BAR ============== */
+.trust{
+  background:linear-gradient(135deg,var(--c-secondary),var(--c-primary-deep));
+  color:#fff;padding:36px 0;position:relative;
+}
+.trust::before{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent 0 14px,rgba(200,164,92,.05) 14px 15px);
+  pointer-events:none;
+}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;position:relative;
+}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:6px}
+.trust-item i{font-size:1.8rem;color:var(--c-accent-bright);margin-bottom:6px}
+.trust-num{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--c-accent-bright)}
+.trust-label{font-size:.85rem;opacity:.85;letter-spacing:.05em}
+
+/* ============== PAKET ============== */
+.paket-bg{background:var(--c-cream)}
+.paket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.paket-card{
+  background:#fff;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:all .5s var(--ease);
+  display:flex;flex-direction:column;position:relative;
+  border:1px solid var(--c-line);
+}
+.paket-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
+.paket-card.featured{
+  border:2px solid var(--c-accent);
+  box-shadow:0 20px 60px rgba(200,164,92,.25);
+  transform:scale(1.02);
+}
+.paket-card.featured:hover{transform:scale(1.02) translateY(-10px)}
+.paket-ribbon{
+  position:absolute;top:18px;right:-38px;transform:rotate(40deg);
+  background:linear-gradient(135deg,var(--c-accent-bright),var(--c-accent));
+  color:var(--c-secondary);font-weight:700;font-size:.72rem;letter-spacing:.15em;
+  padding:8px 50px;z-index:2;box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+.paket-img{height:220px;position:relative;overflow:hidden}
+.paket-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.paket-card:hover .paket-img img{transform:scale(1.1)}
+.paket-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,17,64,.5))}
+.paket-badge{
+  position:absolute;top:18px;left:18px;z-index:2;
+  background:rgba(255,255,255,.95);color:var(--c-primary-deep);
+  padding:6px 14px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
+.paket-body{padding:30px;flex:1;display:flex;flex-direction:column}
+.paket-body h3{margin-bottom:8px}
+.paket-duration{display:inline-flex;align-items:center;gap:8px;color:var(--c-accent-deep);font-weight:500;font-size:.9rem;margin-bottom:18px}
+.paket-price{font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--c-primary-deep);margin-bottom:6px}
+.paket-price small{font-size:.9rem;color:var(--c-muted);font-weight:400;display:block;font-family:var(--font-body)}
+.paket-features{list-style:none;margin:22px 0;padding-top:20px;border-top:1px dashed var(--c-line);flex:1}
+.paket-features li{display:flex;align-items:flex-start;gap:10px;padding:7px 0;font-size:.92rem;color:var(--c-muted)}
+.paket-features i{color:var(--c-accent);margin-top:5px}
+
+/* ============== JADWAL ============== */
+.jadwal-bg{
+  background:linear-gradient(180deg,var(--c-sand),var(--c-cream));
+}
+.jadwal-list{display:grid;gap:18px;max-width:900px;margin:0 auto}
+.jadwal-row{
+  display:grid;grid-template-columns:auto 1fr auto auto auto;gap:24px;align-items:center;
+  background:#fff;padding:22px 28px;border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);transition:.4s;
+  border-left:4px solid var(--c-accent);
+}
+.jadwal-row:hover{transform:translateX(6px);box-shadow:var(--shadow-md)}
+.jadwal-date{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--c-primary-deep);min-width:170px}
+.jadwal-pkg{color:var(--c-muted);font-size:.95rem}
+.jadwal-quota{font-size:.85rem;color:var(--c-muted)}
+.jadwal-quota strong{color:var(--c-ink);display:block;font-size:1.05rem}
+.status{padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.05em}
+.status.open{background:#dcfce7;color:#166534}
+.status.almost{background:#fef3c7;color:#92400e;animation:pulse 2s infinite}
+.status.full{background:#fee2e2;color:#991b1b}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.65}}
+.jadwal-cta{color:var(--c-primary-deep);font-weight:600;font-size:.9rem}
+.jadwal-cta:hover{color:var(--c-accent-deep)}
+
+/* ============== ITINERARY ============== */
+.itin-bg{
+  background:var(--c-secondary);color:#fff;position:relative;overflow:hidden;
+}
+.itin-bg::before{
+  content:"";position:absolute;inset:0;
+  background:url("asset/hero3.jpg") center/cover;
+  opacity:.08;
+}
+.itin-bg h2{color:#fff}
+.itin-bg .section-title p{color:rgba(255,255,255,.75)}
+.timeline{position:relative;max-width:880px;margin:0 auto;padding:20px 0}
+.timeline::before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,transparent,var(--c-accent),transparent);
+  transform:translateX(-50%);
+}
+.tl-item{position:relative;display:grid;grid-template-columns:1fr auto 1fr;gap:30px;margin-bottom:50px;align-items:center}
+.tl-dot{
+  width:18px;height:18px;border-radius:50%;background:var(--c-accent-bright);
+  box-shadow:0 0 0 5px rgba(232,197,71,.2), 0 0 20px var(--c-accent);
+  position:relative;z-index:2;
+}
+.tl-card{
+  background:rgba(255,255,255,.06);backdrop-filter:blur(10px);
+  border:1px solid rgba(200,164,92,.2);
+  padding:22px 26px;border-radius:var(--radius);
+}
+.tl-card h4{color:var(--c-accent-bright);font-size:1.15rem;margin-bottom:8px;font-family:var(--font-display)}
+.tl-card p{font-size:.92rem;opacity:.85;line-height:1.65}
+.tl-day{
+  font-family:var(--font-display);font-size:2.4rem;font-weight:700;
+  color:var(--c-accent-bright);opacity:.5;text-align:center;
+}
+.tl-item:nth-child(even) .tl-card{order:1}
+.tl-item:nth-child(even) .tl-day{order:3;text-align:center}
+.tl-item:nth-child(odd) > div:nth-child(1){text-align:right}
+.tl-item:nth-child(even) > div:nth-child(1){visibility:hidden}
+.tl-item:nth-child(odd) > div:nth-child(3){visibility:hidden}
+
+/* ============== HOTEL ============== */
+.hotel-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}
+.hotel-card{
+  background:#fff;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-md);transition:.5s;
+}
+.hotel-card:hover{transform:translateY(-6px)}
+.hotel-img{height:280px;position:relative;overflow:hidden}
+.hotel-img img{width:100%;height:100%;object-fit:cover}
+.hotel-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,17,64,.85))}
+.hotel-city{position:absolute;top:20px;left:20px;background:var(--c-accent);color:var(--c-secondary);padding:8px 18px;border-radius:999px;font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;z-index:2}
+.hotel-name{position:absolute;bottom:20px;left:24px;right:24px;color:#fff;z-index:2}
+.hotel-name h3{color:#fff;margin-bottom:4px}
+.hotel-stars{color:var(--c-accent-bright);letter-spacing:2px}
+.hotel-body{padding:24px 28px;display:flex;align-items:center;gap:16px;color:var(--c-muted);font-size:.92rem}
+.hotel-body i{color:var(--c-accent);font-size:1.1rem}
+
+.maskapai{
+  margin-top:50px;background:#fff;border-radius:var(--radius);
+  padding:30px 40px;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:20px;box-shadow:var(--shadow-sm);
+  border:1px solid var(--c-line);
+}
+.maskapai-label{color:var(--c-muted);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase}
+.maskapai-name{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--c-primary-deep)}
+.maskapai i{font-size:2.4rem;color:var(--c-accent)}
+
+/* ============== PEMBIMBING ============== */
+.pemb-bg{background:var(--c-cream);position:relative}
+.pemb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1080px;margin:0 auto}
+.pemb-card{
+  background:#fff;padding:36px 30px;border-radius:var(--radius-lg);
+  text-align:center;box-shadow:var(--shadow-sm);transition:.5s;position:relative;overflow:hidden;
+}
+.pemb-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--c-primary),var(--c-accent));
+}
+.pemb-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md)}
+.pemb-photo{
+  width:140px;height:140px;border-radius:50%;margin:0 auto 20px;overflow:hidden;
+  border:4px solid var(--c-accent-bright);position:relative;
+  box-shadow:0 10px 30px rgba(200,164,92,.3);
+}
+.pemb-photo img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.pemb-card:hover .pemb-photo img{transform:scale(1.1)}
+.pemb-card h3{margin-bottom:6px}
+.pemb-title{color:var(--c-accent-deep);font-size:.9rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.pemb-desc{color:var(--c-muted);font-size:.92rem;line-height:1.7}
+.pemb-meta{
+  margin-top:18px;padding-top:18px;border-top:1px dashed var(--c-line);
+  font-size:.85rem;color:var(--c-primary-deep);font-weight:600;
+}
+
+/* ============== GALERI ============== */
+.galeri-bg{background:#fff}
+.galeri-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;
+}
+.galeri-item{
+  position:relative;overflow:hidden;border-radius:var(--radius);cursor:pointer;
+}
+.galeri-item img{width:100%;height:100%;object-fit:cover;transition:.7s var(--ease)}
+.galeri-item:hover img{transform:scale(1.1)}
+.galeri-item::after{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,17,64,.75));
+  opacity:0;transition:.4s;
+}
+.galeri-item:hover::after{opacity:1}
+.galeri-caption{
+  position:absolute;bottom:16px;left:18px;right:18px;color:#fff;font-size:.85rem;font-weight:500;
+  opacity:0;transform:translateY(10px);transition:.4s;z-index:2;
+}
+.galeri-item:hover .galeri-caption{opacity:1;transform:translateY(0)}
+.galeri-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+.galeri-item:nth-child(6){grid-column:span 2}
+
+/* ============== TESTIMONI ============== */
+.testi-bg{
+  background:linear-gradient(135deg,var(--c-secondary),var(--c-primary-deep));
+  color:#fff;position:relative;overflow:hidden;
+}
+.testi-bg::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 20% 20%,rgba(200,164,92,.15),transparent 50%),
+             radial-gradient(circle at 80% 80%,rgba(30,43,230,.3),transparent 50%);
+}
+.testi-bg h2{color:#fff}
+.testi-bg .eyebrow{color:var(--c-accent-bright)}
+.testi-bg .section-title p{color:rgba(255,255,255,.75)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative}
+.testi-card{
+  background:rgba(255,255,255,.06);backdrop-filter:blur(12px);
+  border:1px solid rgba(200,164,92,.25);
+  padding:36px 32px;border-radius:var(--radius-lg);position:relative;
+  transition:.5s;
+}
+.testi-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
+.testi-quote{
+  font-family:var(--font-display);font-size:5rem;color:var(--c-accent-bright);
+  line-height:.6;opacity:.4;position:absolute;top:20px;right:24px;
+}
+.testi-stars{color:var(--c-accent-bright);margin-bottom:18px;letter-spacing:3px;font-size:.95rem}
+.testi-text{font-style:italic;line-height:1.75;opacity:.92;margin-bottom:24px;font-size:.98rem}
+.testi-author{display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1px solid rgba(200,164,92,.2)}
+.testi-avatar{width:50px;height:50px;border-radius:50%;background:var(--c-accent);display:grid;place-items:center;color:var(--c-secondary);font-weight:700;font-family:var(--font-display);font-size:1.2rem}
+.testi-name{font-weight:600;font-size:.98rem}
+.testi-meta{font-size:.8rem;opacity:.7}
+
+/* ============== FAQ ============== */
+.faq-bg{background:var(--c-cream)}
+.faq-wrap{max-width:820px;margin:0 auto}
+.faq-item{
+  background:#fff;border-radius:var(--radius);margin-bottom:14px;
+  box-shadow:var(--shadow-sm);overflow:hidden;border:1px solid var(--c-line);
+  transition:.3s;
+}
+.faq-item.open{box-shadow:var(--shadow-md);border-color:var(--c-accent)}
+.faq-q{
+  width:100%;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  text-align:left;font-weight:600;font-size:1.02rem;color:var(--c-secondary);
+}
+.faq-icon{
+  width:32px;height:32px;border-radius:50%;background:var(--c-cream);
+  display:grid;place-items:center;color:var(--c-primary-deep);
+  font-weight:700;font-size:1.1rem;flex-shrink:0;transition:.3s;
+}
+.faq-item.open .faq-icon{background:var(--c-accent);color:#fff;transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .5s var(--ease);
+  padding:0 28px;color:var(--c-muted);
+}
+.faq-item.open .faq-a{max-height:300px;padding:0 28px 22px}
+
+/* ============== FINAL CTA ============== */
+.final-cta{
+  position:relative;color:#fff;text-align:center;padding:140px 0;overflow:hidden;
+}
+.final-cta::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:url("asset/hero1.jpeg") center/cover;
+  transform:scale(1.1);
+  animation:kenburns 25s var(--ease) infinite alternate;
+}
+.final-cta::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(10,15,46,.85),rgba(15,26,140,.9));
+}
+.final-cta h2{color:#fff;font-size:clamp(2.2rem,4.5vw,3.6rem);margin-bottom:18px}
+.final-cta p{font-size:1.15rem;opacity:.9;max-width:620px;margin:0 auto 36px}
+.urgency{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(232,197,71,.15);border:1px solid var(--c-accent-bright);
+  padding:10px 22px;border-radius:999px;color:var(--c-accent-bright);
+  font-size:.88rem;font-weight:600;margin-bottom:24px;animation:pulse 2.5s infinite;
+}
+.btn-mega{
+  padding:22px 50px;font-size:1.1rem;
+  box-shadow:0 0 0 0 rgba(232,197,71,.6), var(--shadow-gold);
+  animation:glowpulse 2.5s infinite;
+}
+@keyframes glowpulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(232,197,71,.5), var(--shadow-gold)}
+  50%{box-shadow:0 0 0 20px rgba(232,197,71,0), var(--shadow-gold)}
+}
+
+/* ============== MAP ============== */
+.map-bg{background:#fff}
+.map-wrap{
+  max-width:1080px;margin:30px auto 0;border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-md);border:4px solid #fff;
+}
+.map-wrap iframe{width:100%;height:420px;display:block;border:0}
+.map-address{text-align:center;margin-top:22px;color:var(--c-muted)}
+.map-address i{color:var(--c-accent);margin-right:8px}
+
+/* ============== FOOTER ============== */
+footer{
+  background:var(--c-secondary);color:#fff;padding:80px 0 0;position:relative;
+}
+.footer-ornament{
+  height:8px;background:repeating-linear-gradient(90deg,var(--c-accent) 0 20px,transparent 20px 40px);
+  opacity:.6;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:60px}
+.footer-brand .brand{margin-bottom:20px}
+.footer-brand p{font-size:.92rem;opacity:.7;line-height:1.7;margin-bottom:16px}
+.footer-brand .izin{font-size:.8rem;color:var(--c-accent-bright);font-weight:600}
+.footer-col h4{color:var(--c-accent-bright);font-size:1rem;margin-bottom:18px;font-family:var(--font-body);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:10px;font-size:.92rem;opacity:.8}
+.footer-col a:hover{color:var(--c-accent-bright)}
+.footer-col i{color:var(--c-accent);margin-right:10px;width:18px}
+.footer-social{display:flex;gap:12px;margin-top:8px}
+.footer-social a{
+  width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.08);
+  display:grid;place-items:center;transition:.3s;
+}
+.footer-social a:hover{background:var(--c-accent);color:var(--c-secondary);transform:translateY(-3px)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding:24px 0;
+  text-align:center;font-size:.85rem;opacity:.7;
+}
+
+/* ============== FLOATING ============== */
+.float-wa{
+  position:fixed;bottom:24px;right:24px;z-index:40;
+  width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
+  display:grid;place-items:center;font-size:1.7rem;
+  box-shadow:0 10px 30px rgba(37,211,102,.5);
+  animation:pulse-wa 2s infinite;
+}
+@keyframes pulse-wa{
+  0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.5), 0 0 0 0 rgba(37,211,102,.5)}
+  50%{box-shadow:0 10px 30px rgba(37,211,102,.5), 0 0 0 20px rgba(37,211,102,0)}
+}
+.back-top{
+  position:fixed;bottom:24px;left:24px;z-index:40;
+  width:46px;height:46px;border-radius:50%;background:var(--c-secondary);color:var(--c-accent-bright);
+  display:grid;place-items:center;opacity:0;transform:translateY(20px);pointer-events:none;
+  transition:.3s;box-shadow:var(--shadow-md);
+}
+.back-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
+
+/* ============== ANIMATIONS ============== */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease), transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal-l{transform:translateX(-40px)}
+.reveal-l.in{transform:translateX(0)}
+.reveal-r{transform:translateX(40px)}
+.reveal-r.in{transform:translateX(0)}
+.reveal-scale{transform:scale(.92)}
+.reveal-scale.in{transform:scale(1)}
+.stagger > *{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
+.stagger.in > *{opacity:1;transform:translateY(0)}
+.stagger.in > *:nth-child(1){transition-delay:.05s}
+.stagger.in > *:nth-child(2){transition-delay:.15s}
+.stagger.in > *:nth-child(3){transition-delay:.25s}
+.stagger.in > *:nth-child(4){transition-delay:.35s}
+.stagger.in > *:nth-child(5){transition-delay:.45s}
+.stagger.in > *:nth-child(6){transition-delay:.55s}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 980px){
+  .nav-links{
+    position:fixed;top:0;right:-100%;width:80%;max-width:340px;height:100vh;
+    background:var(--c-secondary);flex-direction:column;justify-content:center;
+    gap:28px;transition:.4s;padding:40px;
+  }
+  .nav-links.open{right:0}
+  .menu-toggle{display:block;z-index:60}
+  .trust-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .paket-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+  .paket-card.featured{transform:none}
+  .paket-card.featured:hover{transform:translateY(-10px)}
+  .hotel-grid{grid-template-columns:1fr}
+  .pemb-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}
+  .testi-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+  .galeri-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .galeri-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .galeri-item:nth-child(6){grid-column:span 2}
+  .footer-grid{grid-template-columns:1fr;gap:36px;text-align:center}
+  .footer-brand .brand{justify-content:center}
+  .footer-social{justify-content:center}
+  .jadwal-row{grid-template-columns:1fr;text-align:center;gap:12px}
+  .timeline::before{left:20px}
+  .tl-item{grid-template-columns:40px 1fr;gap:18px}
+  .tl-item > div:nth-child(1){display:none}
+  .tl-item:nth-child(odd) > div:nth-child(3),.tl-item:nth-child(even) > div:nth-child(3){visibility:visible;order:0}
+  .tl-item:nth-child(even) .tl-card{order:0}
+  .tl-day{font-size:1.4rem;text-align:left!important}
+  .section{padding:80px 0}
+}
+@media (max-width: 540px){
+  .hero-cta{flex-direction:column;width:100%}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-num{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#hero" class="brand">
+      <img src="asset/rmt-logo.png" style="width:46px;height:46px;object-fit:cover;border-radius:50%;">
+      <div>
+        <div class="brand-name">Rayyan Menara Travel</div>
+        <div class="brand-tag">Umroh & Haji Khusus</div>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#paket">Paket</a>
+      <a href="#jadwal">Jadwal</a>
+      <a href="#itinerary">Itinerary</a>
+      <a href="#pembimbing">Pembimbing</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak" class="nav-cta">Daftar Sekarang</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<header class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-orbs"><span></span><span></span><span></span></div>
+
+  <svg class="hero-ornament tl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".5"><circle cx="50" cy="50" r="48"/><circle cx="50" cy="50" r="36"/><circle cx="50" cy="50" r="24"/><path d="M50 2L98 50 50 98 2 50z"/><path d="M14 14L86 86M86 14L14 86"/></svg>
+  <svg class="hero-ornament br" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".5"><circle cx="50" cy="50" r="48"/><path d="M50 2L98 50 50 98 2 50z"/><path d="M26 26L74 74M74 26L26 74"/><circle cx="50" cy="50" r="20"/></svg>
+
+  <div class="container hero-content">
+    <img src="asset/rmt-logo.png" class="hero-logo reveal" style="object-fit:cover;border-radius:50%;">
+    <div class="hero-arabic reveal">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <h1 class="reveal">Bersama Meraih <span class="gold">Kemuliaan</span><br/>di Tanah Suci</h1>
+    <p class="hero-sub reveal">Sekali Bayar, Umroh Berkali-Kali. Wujudkan panggilan Baitullah bersama Rayyan Menara Travel — bimbingan ustadz berpengalaman, layanan amanah, hotel premium dekat Masjidil Haram.</p>
+    <div class="hero-cta reveal">
+      <a href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20tertarik%20dengan%20paket%20umroh%20Rayyan%20Menara%20Travel" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Konsultasi Gratis</a>
+      <a href="#paket" class="btn btn-ghost"><i class="fa-solid fa-kaaba"></i> Lihat Paket</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<!-- ============== TRUST BAR ============== -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid stagger">
+      <div class="trust-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div class="trust-num">Resmi</div>
+        <div class="trust-label">Berizin Kemenag RI</div>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-file-contract"></i>
+        <div class="trust-num">PPIU<br><span style="font-size:.9rem">No. XXX/2023</span></div>
+        <div class="trust-label">Izin Operasional</div>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <div class="trust-num"><span class="count" data-target="12">0</span>+</div>
+        <div class="trust-label">Tahun Pengalaman</div>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-users"></i>
+        <div class="trust-num"><span class="count" data-target="3500">0</span>+</div>
+        <div class="trust-label">Jamaah Terlayani</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PAKET ============== -->
+<section class="section paket-bg" id="paket">
+  <div class="geo-bg"></div>
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Pilihan Perjalanan</span>
+      <h2>Paket Perjalanan Suci</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+      <p>Pilih paket yang paling sesuai dengan kebutuhan ibadah Anda. Setiap paket dirancang untuk kenyamanan dan kekhusyukan.</p>
+    </div>
+
+    <div class="paket-grid stagger">
+      <!-- PLACEHOLDER: EDIT DATA INI -->
+      <div class="paket-card">
+        <div class="paket-img">
+          <span class="paket-badge">Ekonomis</span>
+          <img loading="lazy" src="asset/hero3.jpg" alt="Umroh Reguler"/>
+        </div>
+        <div class="paket-body">
+          <h3>Umroh Reguler</h3>
+          <div class="paket-duration"><i class="fa-regular fa-calendar"></i> 9 Hari Perjalanan</div>
+          <div class="paket-price">Rp 28.500.000 <small>per jamaah / kuota terbatas</small></div>
+          <ul class="paket-features">
+            <li><i class="fa-solid fa-check"></i> Tiket Pesawat PP (Direct)</li>
+            <li><i class="fa-solid fa-check"></i> Hotel Bintang 4 (jarak ±400m)</li>
+            <li><i class="fa-solid fa-check"></i> Visa Umroh & Asuransi</li>
+            <li><i class="fa-solid fa-check"></i> Bimbingan Ustadz Bersertifikat</li>
+            <li><i class="fa-solid fa-check"></i> Manasik & Perlengkapan</li>
+            <li><i class="fa-solid fa-check"></i> Makan 3x Sehari Menu Indonesia</li>
+          </ul>
+          <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20paket%20Umroh%20Reguler" target="_blank" class="btn btn-primary" style="justify-content:center"><i class="fa-brands fa-whatsapp"></i> Pilih Paket</a>
+        </div>
+      </div>
+
+      <div class="paket-card featured">
+        <div class="paket-ribbon">TERLARIS</div>
+        <div class="paket-img">
+          <span class="paket-badge">Premium</span>
+          <img loading="lazy" src="asset/hero6.jpg" alt="Umroh Plus"/>
+        </div>
+        <div class="paket-body">
+          <h3>Umroh Plus Madinah</h3>
+          <div class="paket-duration"><i class="fa-regular fa-calendar"></i> 12 Hari Perjalanan</div>
+          <div class="paket-price">Rp 39.900.000 <small>per jamaah / paket unggulan</small></div>
+          <ul class="paket-features">
+            <li><i class="fa-solid fa-check"></i> Pesawat Garuda / Saudia (Direct)</li>
+            <li><i class="fa-solid fa-check"></i> Hotel Bintang 5 (jarak ±200m)</li>
+            <li><i class="fa-solid fa-check"></i> Ziarah Lengkap Makkah & Madinah</li>
+            <li><i class="fa-solid fa-check"></i> City Tour & Jabal Tsur</li>
+            <li><i class="fa-solid fa-check"></i> Pembimbing Ustadz Senior</li>
+            <li><i class="fa-solid fa-check"></i> Air Zam-Zam 5 Liter</li>
+          </ul>
+          <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20paket%20Umroh%20Plus%20Madinah" target="_blank" class="btn btn-primary" style="justify-content:center"><i class="fa-brands fa-whatsapp"></i> Pilih Paket</a>
+        </div>
+      </div>
+
+      <div class="paket-card">
+        <div class="paket-img">
+          <span class="paket-badge">VIP</span>
+          <img loading="lazy" src="asset/hero5.jpg" alt="Haji Khusus"/>
+        </div>
+        <div class="paket-body">
+          <h3>Haji Khusus</h3>
+          <div class="paket-duration"><i class="fa-regular fa-calendar"></i> 26 Hari Perjalanan</div>
+          <div class="paket-price">Rp 215.000.000 <small>per jamaah / pelunasan bertahap</small></div>
+          <ul class="paket-features">
+            <li><i class="fa-solid fa-check"></i> Quota Resmi Kemenag</li>
+            <li><i class="fa-solid fa-check"></i> Hotel Bintang 5 Mina & Arafah</li>
+            <li><i class="fa-solid fa-check"></i> Tenda VIP di Mina (AC)</li>
+            <li><i class="fa-solid fa-check"></i> Catering Indonesia Halal</li>
+            <li><i class="fa-solid fa-check"></i> Tim Medis Standby 24 Jam</li>
+            <li><i class="fa-solid fa-check"></i> Bimbingan Intensif Pra-Berangkat</li>
+          </ul>
+          <a href="https://wa.me/6281234567890?text=Saya%20tertarik%20paket%20Haji%20Khusus" target="_blank" class="btn btn-primary" style="justify-content:center"><i class="fa-brands fa-whatsapp"></i> Pilih Paket</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== JADWAL ============== -->
+<section class="section jadwal-bg" id="jadwal">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Jadwal Keberangkatan</span>
+      <h2>Pilih Batch Anda</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+      <p>Tersedia keberangkatan setiap bulan. Booking lebih awal untuk mendapatkan harga terbaik.</p>
+    </div>
+
+    <div class="jadwal-list stagger">
+      <!-- PLACEHOLDER: EDIT DATA INI -->
+      <div class="jadwal-row">
+        <div class="jadwal-date">15 Feb 2026</div>
+        <div class="jadwal-pkg">Umroh Reguler · 9 Hari · Direct Madinah</div>
+        <div class="jadwal-quota"><strong>12 / 45</strong>seat terisi</div>
+        <span class="status open">Tersedia</span>
+        <a href="https://wa.me/6281234567890" target="_blank" class="jadwal-cta">Ambil Seat →</a>
+      </div>
+      <div class="jadwal-row">
+        <div class="jadwal-date">20 Mar 2026</div>
+        <div class="jadwal-pkg">Umroh Plus Madinah · 12 Hari</div>
+        <div class="jadwal-quota"><strong>38 / 45</strong>seat terisi</div>
+        <span class="status almost">Hampir Penuh</span>
+        <a href="https://wa.me/6281234567890" target="_blank" class="jadwal-cta">Ambil Seat →</a>
+      </div>
+      <div class="jadwal-row">
+        <div class="jadwal-date">12 Apr 2026</div>
+        <div class="jadwal-pkg">Umroh Ramadhan · 15 Hari</div>
+        <div class="jadwal-quota"><strong>45 / 45</strong>seat terisi</div>
+        <span class="status full">Penuh</span>
+        <span class="jadwal-cta" style="opacity:.5">Tutup</span>
+      </div>
+      <div class="jadwal-row">
+        <div class="jadwal-date">10 Mei 2026</div>
+        <div class="jadwal-pkg">Umroh Syawal · 9 Hari</div>
+        <div class="jadwal-quota"><strong>8 / 45</strong>seat terisi</div>
+        <span class="status open">Tersedia</span>
+        <a href="https://wa.me/6281234567890" target="_blank" class="jadwal-cta">Ambil Seat →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ITINERARY ============== -->
+<section class="section itin-bg" id="itinerary">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow" style="color:var(--c-accent-bright)">Perjalanan Hari Demi Hari</span>
+      <h2>Itinerary Umroh 9 Hari</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--c-accent-bright)"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+      <p>Rangkaian ibadah dan ziarah yang teratur, terbimbing, dan penuh makna.</p>
+    </div>
+
+    <div class="timeline">
+      <!-- PLACEHOLDER: EDIT DATA INI -->
+      <div class="tl-item reveal">
+        <div><div class="tl-card"><h4>Keberangkatan dari Tanah Air</h4><p>Berkumpul di Bandara Sultan Hasanuddin Makassar, manasik singkat, lalu terbang menuju Jeddah dengan penerbangan langsung.</p></div></div>
+        <div class="tl-dot"></div>
+        <div><div class="tl-day">Hari 1</div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div><div class="tl-day">Hari 2</div></div>
+        <div class="tl-dot"></div>
+        <div><div class="tl-card"><h4>Tiba di Madinah Al-Munawwarah</h4><p>Check-in hotel, istirahat, dan ibadah perdana di Masjid Nabawi. Sholat berjamaah dan ziarah Raudhah.</p></div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div><div class="tl-card"><h4>Ziarah Kota Madinah</h4><p>Kunjungan ke Masjid Quba, Masjid Qiblatain, Jabal Uhud, dan Kebun Kurma. Memperdalam sejarah Islam.</p></div></div>
+        <div class="tl-dot"></div>
+        <div><div class="tl-day">Hari 3</div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div><div class="tl-day">Hari 4</div></div>
+        <div class="tl-dot"></div>
+        <div><div class="tl-card"><h4>Menuju Makkah Al-Mukarromah</h4><p>Mengambil miqat di Bir Ali dengan niat umroh, perjalanan menuju Makkah, lalu pelaksanaan umroh pertama.</p></div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div><div class="tl-card"><h4>Ibadah di Masjidil Haram</h4><p>Memperbanyak thawaf sunnah, sholat berjamaah di shaff terdepan, dan i'tikaf di area Multazam.</p></div></div>
+        <div class="tl-dot"></div>
+        <div><div class="tl-day">Hari 5-7</div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div><div class="tl-day">Hari 8</div></div>
+        <div class="tl-dot"></div>
+        <div><div class="tl-card"><h4>City Tour Makkah</h4><p>Ziarah Jabal Tsur, Jabal Rahmah, Padang Arafah, Muzdalifah, dan Mina. Mengulang umroh dari Tan'im.</p></div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div><div class="tl-card"><h4>Thawaf Wada' & Kepulangan</h4><p>Thawaf perpisahan di Masjidil Haram, perjalanan ke Jeddah, dan terbang kembali ke tanah air dengan hati yang penuh syukur.</p></div></div>
+        <div class="tl-dot"></div>
+        <div><div class="tl-day">Hari 9</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOTEL ============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Akomodasi & Maskapai</span>
+      <h2>Hotel Premium Dekat Tanah Suci</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+      <p>Kami pilihkan hotel terbaik dengan jarak strategis agar ibadah Anda lebih nyaman dan khusyuk.</p>
+    </div>
+
+    <div class="hotel-grid stagger">
+      <!-- PLACEHOLDER: EDIT DATA INI -->
+      <div class="hotel-card">
+        <div class="hotel-img">
+          <span class="hotel-city">Makkah</span>
+          <img loading="lazy" src="asset/hotel1.png" alt="Hotel Makkah"/>
+          <div class="hotel-name">
+            <h3>Pullman ZamZam Makkah</h3>
+            <div class="hotel-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="hotel-body">
+          <i class="fa-solid fa-person-walking"></i>
+          <span>Hanya ±150 meter — sekitar 3 menit jalan kaki ke Masjidil Haram</span>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-img">
+          <span class="hotel-city">Madinah</span>
+          <img loading="lazy" src="asset/hotel2.png" alt="Hotel Madinah"/>
+          <div class="hotel-name">
+            <h3>Dar Al Iman Intercontinental</h3>
+            <div class="hotel-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="hotel-body">
+          <i class="fa-solid fa-person-walking"></i>
+          <span>Tepat di seberang Masjid Nabawi — pintu Bab Salam terlihat dari lobby</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="maskapai reveal">
+      <i class="fa-solid fa-plane-departure"></i>
+      <div>
+        <div class="maskapai-label">Maskapai Resmi</div>
+        <div class="maskapai-name">Garuda Indonesia / Saudia Airlines</div>
+      </div>
+      <div style="color:var(--c-muted);font-size:.9rem;max-width:280px;text-align:right">Penerbangan langsung (direct flight) menuju Madinah / Jeddah</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PEMBIMBING ============== -->
+<section class="section pemb-bg" id="pembimbing">
+  <div class="geo-bg"></div>
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Tim Pembimbing</span>
+      <h2>Dibimbing Ustadz Berpengalaman</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+      <p>Setiap rombongan didampingi ustadz bersertifikat yang menguasai manasik dan sejarah tanah suci.</p>
+    </div>
+
+    <div class="pemb-grid stagger">
+      <!-- PLACEHOLDER: EDIT DATA INI -->
+      <div class="pemb-card">
+        <div class="pemb-photo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" width="110" height="110">
+  <circle cx="55" cy="55" r="55" fill="#1a2d6b"/>
+  <circle cx="55" cy="43" r="17" fill="#e8d5a3"/>
+  <path d="M38 33 Q38 20 55 20 Q72 20 72 33 L72 36 Q55 32 38 36 Z" fill="#c8a030"/>
+  <rect x="37" y="34" width="36" height="5" rx="2" fill="#a07020"/>
+  <path d="M18 110 Q22 76 55 73 Q88 76 92 110 Z" fill="#c8a030"/>
+  <path d="M30 110 Q33 82 55 79 Q77 82 80 110 Z" fill="#e8d5a3"/>
+</svg></div>
+        <h3>Ust. H. Abdurrahman, Lc</h3>
+        <div class="pemb-title">Pembimbing Senior</div>
+        <p class="pemb-desc">Alumni Universitas Islam Madinah. Berpengalaman membimbing lebih dari 80 keberangkatan umroh dan haji.</p>
+        <div class="pemb-meta"><i class="fa-solid fa-mosque"></i> 80+ Keberangkatan</div>
+      </div>
+      <div class="pemb-card">
+        <div class="pemb-photo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" width="110" height="110">
+  <circle cx="55" cy="55" r="55" fill="#1e3a7a"/>
+  <circle cx="55" cy="43" r="17" fill="#e8d5a3"/>
+  <path d="M38 33 Q38 20 55 20 Q72 20 72 33 L72 36 Q55 32 38 36 Z" fill="#c8a030"/>
+  <rect x="37" y="34" width="36" height="5" rx="2" fill="#a07020"/>
+  <path d="M18 110 Q22 76 55 73 Q88 76 92 110 Z" fill="#c8a030"/>
+  <path d="M30 110 Q33 82 55 79 Q77 82 80 110 Z" fill="#e8d5a3"/>
+</svg></div>
+        <h3>Ust. H. Yusuf Hidayat, MA</h3>
+        <div class="pemb-title">Ketua Tim Manasik</div>
+        <p class="pemb-desc">Dosen Fiqih Ibadah. Spesialisasi manasik haji & umroh sesuai sunnah dan empat mazhab.</p>
+        <div class="pemb-meta"><i class="fa-solid fa-mosque"></i> 60+ Keberangkatan</div>
+      </div>
+      <div class="pemb-card">
+        <div class="pemb-photo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" width="110" height="110">
+  <circle cx="55" cy="55" r="55" fill="#162558"/>
+  <circle cx="55" cy="43" r="17" fill="#e8d5a3"/>
+  <path d="M38 33 Q38 20 55 20 Q72 20 72 33 L72 36 Q55 32 38 36 Z" fill="#c8a030"/>
+  <rect x="37" y="34" width="36" height="5" rx="2" fill="#a07020"/>
+  <path d="M18 110 Q22 76 55 73 Q88 76 92 110 Z" fill="#c8a030"/>
+  <path d="M30 110 Q33 82 55 79 Q77 82 80 110 Z" fill="#e8d5a3"/>
+</svg></div>
+        <h3>Ust. H. Faisal Akbar, Lc</h3>
+        <div class="pemb-title">Pembimbing Ziarah</div>
+        <p class="pemb-desc">Menguasai sejarah Islam dan situs ziarah di Makkah-Madinah. Fasih bahasa Arab dan Inggris.</p>
+        <div class="pemb-meta"><i class="fa-solid fa-mosque"></i> 45+ Keberangkatan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GALERI ============== -->
+<section class="section galeri-bg" id="galeri">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Momen Jamaah</span>
+      <h2>Galeri Perjalanan</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+      <p>Cerita visual dari jamaah Rayyan Menara Travel di tanah suci.</p>
+    </div>
+
+    <div class="galeri-grid stagger">
+      <div class="galeri-item"><img loading="lazy" src="asset/hero2.jpg" alt=""/><div class="galeri-caption">Khusyuk di hadapan Ka'bah</div></div>
+      <div class="galeri-item"><img loading="lazy" src="asset/hero3.jpg" alt=""/><div class="galeri-caption">Masjid Nabawi malam hari</div></div>
+      <div class="galeri-item"><img loading="lazy" src="asset/hero4.jpg" alt=""/><div class="galeri-caption">Suasana thawaf</div></div>
+      <div class="galeri-item"><img loading="lazy" src="asset/hero5.jpg" alt=""/><div class="galeri-caption">Doa di Multazam</div></div>
+      <div class="galeri-item"><img loading="lazy" src="asset/hero6.jpg" alt=""/><div class="galeri-caption">Ziarah Jabal Rahmah</div></div>
+      <div class="galeri-item"><img loading="lazy" src="asset/hero2.jpg" alt=""/><div class="galeri-caption">Arsitektur Islam</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TESTIMONI ============== -->
+<section class="section testi-bg" id="testimoni">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Cerita Jamaah</span>
+      <h2>Testimoni dari Mereka<br/>yang Pernah Berangkat</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--c-accent-bright)"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+    </div>
+
+    <div class="testi-grid stagger">
+      <!-- PLACEHOLDER: EDIT DATA INI -->
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Alhamdulillah, pelayanan Rayyan Menara sangat memuaskan. Hotel dekat Masjidil Haram, ustadz pembimbing sabar, dan jadwal ibadah teratur. Insya Allah berangkat lagi tahun depan.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">HM</div>
+          <div>
+            <div class="testi-name">H. Muhammad Ridwan</div>
+            <div class="testi-meta">Umroh Plus · Maret 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Pertama kali umroh dan langsung pilih Rayyan Menara. Tidak menyesal! Semua diurus dari A-Z, makanan Indonesia tersedia, dan bimbingan manasik sangat detail.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">HF</div>
+          <div>
+            <div class="testi-name">Hj. Fatimah Az-Zahra</div>
+            <div class="testi-meta">Umroh Reguler · Januari 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Travel amanah, terpercaya, dan profesional. Saya merasa diperlakukan seperti keluarga sendiri. Semoga Rayyan Menara terus menjadi jembatan ibadah jamaah Makassar.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">HA</div>
+          <div>
+            <div class="testi-name">H. Andi Pangerang</div>
+            <div class="testi-meta">Haji Khusus · 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="section faq-bg" id="faq">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="eyebrow">Pertanyaan Umum</span>
+      <h2>Frequently Asked Questions</h2>
+      <div class="divider"><span class="line"></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="line"></span></div>
+    </div>
+
+    <div class="faq-wrap stagger">
+      <!-- PLACEHOLDER: EDIT DATA INI -->
+      <div class="faq-item"><button class="faq-q">Bagaimana sistem pembayaran paketnya?<span class="faq-icon">+</span></button><div class="faq-a"><p>Pembayaran bisa dilakukan secara bertahap (DP minimal 30%), pelunasan paling lambat 30 hari sebelum keberangkatan. Tersedia transfer bank, virtual account, dan cicilan syariah.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Dokumen apa saja yang harus disiapkan?<span class="faq-icon">+</span></button><div class="faq-a"><p>Paspor (masa berlaku minimal 8 bulan), KTP, KK, buku nikah (untuk pasangan), pas foto background putih, dan kartu vaksin meningitis. Pengurusan visa kami bantu sepenuhnya.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Apakah ada kebijakan refund jika batal berangkat?<span class="faq-icon">+</span></button><div class="faq-a"><p>Ya, refund dapat diproses sesuai ketentuan kontrak. Jika pembatalan dari pihak jamaah, dipotong biaya admin & visa yang sudah diurus. Jika dari pihak travel/force majeure, refund 100%.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Bagaimana untuk jamaah lansia atau berkebutuhan khusus?<span class="faq-icon">+</span></button><div class="faq-a"><p>Kami menyediakan kursi roda, pendampingan ekstra, dan kamar hotel khusus dekat lift. Tim medis standby selama perjalanan. Silakan informasikan saat pendaftaran.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Apakah ada manasik sebelum keberangkatan?<span class="faq-icon">+</span></button><div class="faq-a"><p>Tentu. Kami mengadakan manasik 3x sebelum berangkat: manasik teori, manasik praktek, dan manasik pemantapan. Perlengkapan ibadah & buku panduan kami sediakan gratis.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Apakah kuota jamaah per ustadz dibatasi?<span class="faq-icon">+</span></button><div class="faq-a"><p>Ya, kami menjaga rasio 1 ustadz : 15-20 jamaah agar bimbingan tetap intensif dan personal selama perjalanan.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="final-cta" id="kontak">
+  <div class="container">
+    <div class="urgency reveal"><i class="fa-solid fa-fire"></i> Kuota Terbatas — Batch Terdekat 15 Februari 2026</div>
+    <h2 class="reveal">Siap Mewujudkan Impian ke Baitullah?</h2>
+    <p class="reveal">Hubungi tim kami sekarang untuk konsultasi GRATIS, brosur lengkap, dan penawaran terbaik bulan ini.</p>
+    <a href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20ingin%20konsultasi%20paket%20umroh%20Rayyan%20Menara%20Travel" target="_blank" class="btn btn-primary btn-mega reveal"><i class="fa-brands fa-whatsapp"></i> Hubungi via WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============== MAP ============== -->
+<section class="section-sm map-bg">
+  <div class="container">
+    <div class="section-title reveal" style="margin-bottom:20px">
+      <span class="eyebrow">Lokasi Kantor</span>
+      <h2 style="font-size:1.8rem;margin-top:10px">Kunjungi Kantor Kami</h2>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=Summarecon+Mutiara+Makassar&output=embed" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="map-address"><i class="fa-solid fa-location-dot"></i> Ruko Graha Boulevard Timur 2 No. E07 (GBT2/E07), Summarecon Mutiara, Makassar 90243</p>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="footer-ornament"></div>
+  <div class="container" style="padding-top:60px">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="brand">
+          <img src="asset/rmt-logo.png" style="width:46px;height:46px;object-fit:cover;border-radius:50%;">
+          <div>
+            <div class="brand-name">Rayyan Menara Travel</div>
+            <div class="brand-tag">Bersama Meraih Kemuliaan</div>
+          </div>
+        </a>
+        <p>Travel umroh & haji khusus terpercaya. Sekali Bayar, Umroh Berkali-Kali. Melayani jamaah dari seluruh Indonesia Timur.</p>
+        <div class="izin">Izin PPIU No. XXX/2023 · Resmi Kemenag RI</div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#paket">Paket Perjalanan</a></li>
+          <li><a href="#jadwal">Jadwal Keberangkatan</a></li>
+          <li><a href="#itinerary">Itinerary</a></li>
+          <li><a href="#pembimbing">Pembimbing</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Ruko Graha Boulevard Timur 2 No. E07, Summarecon Mutiara, Makassar 90243</li>
+          <li><i class="fa-solid fa-phone"></i> +62 812-3456-7890</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890</li>
+          <li><i class="fa-solid fa-envelope"></i> info@rayyanmenara.com</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ikuti Kami</h4>
+        <ul>
+          <li><a href="https://instagram.com/rayyanmenaratravel" target="_blank"><i class="fa-brands fa-instagram"></i> @rayyanmenaratravel</a></li>
+          <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Rayyan Menara</a></li>
+          <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i> @rayyanmenara</a></li>
+          <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i> Rayyan Menara TV</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="https://instagram.com/rayyanmenaratravel" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Rayyan Menara Travel. All rights reserved. · Made with ﷺ love</div>
+</footer>
+
+<!-- ============== FLOATING ============== -->
+<a href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20ingin%20bertanya" target="_blank" class="float-wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+  if (window.scrollY > 300) backTop.classList.add('show'); else backTop.classList.remove('show');
+});
+backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Intersection Observer reveals
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal, .stagger').forEach(el => io.observe(el));
+
+// Counters
+const counters = document.querySelectorAll('.count');
+const cio = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = +el.dataset.target;
+    const dur = 1800;
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - start)/dur, 1);
+      const val = Math.floor(target * (1 - Math.pow(1-p, 3)));
+      el.textContent = val.toLocaleString('id-ID');
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    cio.unobserve(el);
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => cio.observe(c));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    document.querySelectorAll('.faq-item.open').forEach(o => { if (o !== item) o.classList.remove('open'); });
+    item.classList.toggle('open');
+  });
+});
+
+// Hero parallax
+const heroBg = document.querySelector('.hero-bg');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight && heroBg) {
+    heroBg.style.transform = `scale(1.1) translateY(${y * 0.3}px)`;
+  }
+}, { passive: true });
+</script>
+</body>
+</html>
