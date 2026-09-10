@@ -4,6 +4,15 @@ import InView from "./InView";
 
 const projects = [
   {
+    title: "Ihsan Learning",
+    type: "project",
+    image: null,
+    url: "https://ihsanlearning.id",
+    description:
+      "A free, no-registration learning platform offering a curated library of health and research reading materials — organized by category and viewable directly in the browser.",
+    tags: ["Next.js", "React.js"],
+  },
+  {
     title: "DeweTour",
     type: "practice",
     image: null,
