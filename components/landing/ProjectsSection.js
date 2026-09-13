@@ -55,15 +55,15 @@ const projects = [
       "Aviation and air services platform offering streamlined booking, fleet management, and operational tools for the airline industry.",
     tags: ["Next.js", "Node.js", "PostgreSQL"],
   },
-  {
-    title: "Halonora",
-    type: "project",
-    image: null,
-    url: "https://halonora.id",
-    description:
-      "Digital platform delivering innovative solutions with a focus on user experience and modern web technologies for the Indonesian market.",
-    tags: ["React.js", "Next.js", "GraphQL"],
-  },
+  // {
+  //   title: "Halonora",
+  //   type: "project",
+  //   image: null,
+  //   url: "https://halonora.id",
+  //   description:
+  //     "Digital platform delivering innovative solutions with a focus on user experience and modern web technologies for the Indonesian market.",
+  //   tags: ["React.js", "Next.js", "GraphQL"],
+  // },
   {
     title: "Multiwahana Tama Logistik",
     type: "project",
@@ -131,7 +131,11 @@ function ProjectImagePlaceholder({ title, index }) {
 
 const headerVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 
 const cardVariants = (i) => ({
@@ -154,20 +158,26 @@ export default function ProjectsSection() {
             <h2 className={styles.sectionTitle}>Featured Projects</h2>
             <div className={styles.sectionDivider} />
             <p className={styles.sectionDesc}>
-              A selection of projects I&apos;ve built — from social platforms
-              to travel apps. Each project reflects my passion for great UX
-              and clean code.
+              A selection of projects I&apos;ve built — from social platforms to
+              travel apps. Each project reflects my passion for great UX and
+              clean code.
             </p>
           </div>
         </InView>
 
         <div className={styles.projectsGrid}>
           {projects.map((project, i) => (
-            <InView key={project.title} variants={cardVariants(i)} threshold={0.1}>
+            <InView
+              key={project.title}
+              variants={cardVariants(i)}
+              threshold={0.1}
+            >
               <div
                 className={styles.projectCard}
                 style={{ cursor: project.url ? "pointer" : "default" }}
-                onClick={() => project.url && window.open(project.url, "_blank")}
+                onClick={() =>
+                  project.url && window.open(project.url, "_blank")
+                }
               >
                 <div className={styles.projectImageWrap}>
                   {project.image ? (
