@@ -73,6 +73,15 @@ const projects = [
       "Logistics and transportation platform providing end-to-end freight management, delivery tracking, and supply chain solutions across Indonesia.",
     tags: ["Next.js", "React.js", "REST API"],
   },
+  {
+    title: "Masjid Al-Burhan",
+    type: "project",
+    image: null,
+    url: "https://masjidalburhan.com",
+    description:
+      "Mosque profile and information platform providing prayer schedules, announcements, and community activities for the Al-Burhan congregation.",
+    tags: ["Next.js", "React.js"],
+  },
 ];
 
 const placeholderColors = [
