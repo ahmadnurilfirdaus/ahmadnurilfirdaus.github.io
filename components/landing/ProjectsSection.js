@@ -82,6 +82,15 @@ const projects = [
       "Mosque profile and information platform providing prayer schedules, announcements, and community activities for the Al-Burhan congregation.",
     tags: ["Next.js", "React.js"],
   },
+  {
+    title: "Dzikir",
+    type: "project",
+    image: null,
+    url: "https://dzikir.ahmadnurilfirdaus.com",
+    description:
+      "Morning and evening dzikir reader featuring complete Arabic text, Latin transliteration, translations, and a built-in counter.",
+    tags: ["React.js"],
+  },
 ];
 
 const placeholderColors = [
