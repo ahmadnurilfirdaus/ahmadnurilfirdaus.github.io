@@ -12,32 +12,32 @@ const projects = [
       "A free, no-registration learning platform offering a curated library of health and research reading materials — organized by category and viewable directly in the browser.",
     tags: ["Next.js", "React.js"],
   },
-  {
-    title: "DeweTour",
-    type: "practice",
-    image: null,
-    url: "https://dewetour.vercel.app",
-    description:
-      "A travel booking platform that lets users explore and book tour packages. Features intuitive browsing, booking flow, and a responsive mobile experience.",
-    tags: ["React Native", "Next.js", "Express", "REST API"],
-  },
-  {
-    title: "The Journey",
-    type: "practice",
-    image: null,
-    url: "https://thejourney.vercel.app",
-    description:
-      "A travel blog and journal web application where users can document their adventures with rich content, photos, and stories from around the world.",
-    tags: ["Next.js", "Apollo", "GraphQL", "MongoDB"],
-  },
-  {
-    title: "Dumbways",
-    image: null,
-    url: "https://dumbways.id",
-    description:
-      "Coding bootcamp platform connecting aspiring developers with structured learning paths, mentors, and career resources to launch their tech careers.",
-    tags: ["React.js", "Next.js", "Node.js"],
-  },
+  // {
+  //   title: "DeweTour",
+  //   type: "practice",
+  //   image: null,
+  //   url: "https://dewetour.vercel.app",
+  //   description:
+  //     "A travel booking platform that lets users explore and book tour packages. Features intuitive browsing, booking flow, and a responsive mobile experience.",
+  //   tags: ["React Native", "Next.js", "Express", "REST API"],
+  // },
+  // {
+  //   title: "The Journey",
+  //   type: "practice",
+  //   image: null,
+  //   url: "https://thejourney.vercel.app",
+  //   description:
+  //     "A travel blog and journal web application where users can document their adventures with rich content, photos, and stories from around the world.",
+  //   tags: ["Next.js", "Apollo", "GraphQL", "MongoDB"],
+  // },
+  // {
+  //   title: "Dumbways",
+  //   image: null,
+  //   url: "https://dumbways.id",
+  //   description:
+  //     "Coding bootcamp platform connecting aspiring developers with structured learning paths, mentors, and career resources to launch their tech careers.",
+  //   tags: ["React.js", "Next.js", "Node.js"],
+  // },
   {
     title: "Allcare",
     image: null,
